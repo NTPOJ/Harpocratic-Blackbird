@@ -1,9 +1,6 @@
 
 #Module Imports
 import os
-import colorama
-from colorama import *
-import pyfiglet
 
 colorama.init()
 
@@ -11,7 +8,7 @@ colorama.init()
 os.system('cls' if os.name == 'nt' else 'clear')
 
 print("Your good friend Tupolev!".center(80, "-"))
-print(Fore.GREEN +
+print(
 """
    .-.    _,  .-.  ,_    .-.
  '-._'--'  \_| |_/  '--'_.-'
