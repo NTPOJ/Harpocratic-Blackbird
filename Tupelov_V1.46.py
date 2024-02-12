@@ -10,7 +10,7 @@ colorama.init()
 #Clears the terminal when running
 os.system('cls' if os.name == 'nt' else 'clear')
 
-print("Welcome to Drone.py!".center(80, "-"))
+print("Your good friend Tupolev!".center(80, "-"))
 print(Fore.GREEN +
 """
    .-.    _,  .-.  ,_    .-.
