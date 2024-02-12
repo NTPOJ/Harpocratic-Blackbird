@@ -1,13 +1,10 @@
 #Imported modules
-import pyfiglet
 import urllib.request
 import io
-import colorama
-from colorama import Fore
-colorama.init() 
 
-ascii_banner = pyfiglet.figlet_format("Boston Dynamic Rogue-1")
-print(Fore.CYAN + ascii_banner)
+ascii_banner = ("Lets see some robots")
+ascii_banner = ("Boston Dynamic Rogue-1")
+print(ascii_banner)
 
 url = input(str("Please enter target URL:"))
 #Uses URL Library to obtain information on URL's with a robots.txt page.
