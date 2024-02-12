@@ -3,11 +3,7 @@ import socket
 import sys
 from datetime import datetime
 import threading
-import pyfiglet
 import concurrent.futures
-import colorama
-from colorama import Fore
-colorama.init()
 
 #Enables threading for port scans
 print_lock = threading.Lock()
