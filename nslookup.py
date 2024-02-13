@@ -1,8 +1,12 @@
 import socket
+import pyfiglet
+import colorama
+from colorama import Fore
 
+colorama.init()
 
-ascii_banner = ("NSLookup")
-print(ascii_banner.center(80, "-"))
+ascii_banner = pyfiglet.figlet_format("NSLookup")
+print(Fore.GREEN + ascii_banner.center(80, "-"))
 
 
 hostname = input("Please enter target website address:\n")
