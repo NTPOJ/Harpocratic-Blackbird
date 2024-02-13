@@ -46,6 +46,7 @@ print("[2]. I need more!")
 print("[3]. Cyboogie!")
 print("[4]. We need R&D!")
 print("[5]. Launch it!")
+print("[6]. Exit!")
 
 #Imports scripts for each attack based on number chosen	
 selection = input("Choose wisely")
@@ -59,5 +60,7 @@ elif selection == "4":
 	import nslookup
 elif selection == "5":
 	import DoS
+elif selection == "6":
+	break
 else:
-	print("Invalid Selection. Enter 1-5.")
+	print("Invalid Selection. Enter 1-6.")
