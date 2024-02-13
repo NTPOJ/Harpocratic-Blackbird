@@ -63,12 +63,22 @@ def attack():
 		s.close
 
 print("[1]. Back to base!")
-print("[2]. I need more!")
+print("[2]. MORE POWER!")
+print("[3]. Cyboogie!")
+print("[4]. We need R&D!")
+print("[5]. Survey their ports!")
 
-#Import selection selected to either og back to home or stay and go again
+#Imports scripts for each attack based on number chosen	
 selection = input("What next commrade?")
 if selection == "1":
-	import Tupelov_V1.46
-	
+	import Harpocratic-Blackbird
 elif selection == "2":
-	import Dos
+	import DoS
+elif selection == "3":
+	import robots_crawler
+elif selection == "4":
+	import nslookup
+ elif selection == "5":
+	import BackDoorothy
+else:
+	print("Invalid Selection. Enter 1-5.")
