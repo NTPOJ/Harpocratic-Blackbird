@@ -1,9 +1,13 @@
 #Imported modules
 import socket
 import threading
+import pyfiglet
+import colorama
+from colorama import Fore
+colorama.init()
 
-ascii_banner = ("Red-Team fun time")
-print(ascii_banner)
+ascii_banner = pyfiglet.figlet_format("Red-Team fun time")
+print(Fore.CYAN + ascii_banner)
 
 print("DoS Time")
 print("""
