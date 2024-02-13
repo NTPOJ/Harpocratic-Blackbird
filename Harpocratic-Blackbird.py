@@ -10,7 +10,7 @@ colorama.init()
 #Clears the terminal when running
 os.system('cls' if os.name == 'nt' else 'clear')
 
-print("Your good friend Tupolev!".center(80, "-"))
+print("Your good friend Harpocratic Blackbird!".center(80, "-"))
 print(Fore.RED + 
 """
                                     .:^
