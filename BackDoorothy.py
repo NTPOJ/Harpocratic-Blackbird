@@ -38,3 +38,14 @@ def scan(ip, port):
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
     for port in range(1000):
         executor.submit(scan, ip, port + 1)
+
+print("[1]. Back to base!")
+print("[2]. I need more!")
+
+#Import selection selected to either og back to home or stay and go again
+selection = input("What next commrade?")
+if selection == "1":
+	import Tupelov_V1.46
+	
+elif selection == "2":
+	import BackDoorothy
