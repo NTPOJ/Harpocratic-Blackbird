@@ -32,6 +32,7 @@ print("[1]. NS Lookup")
 print("[2]. BackDoorothy (Port Scanner)")
 print("[3]. Robots.txt crawler")
 print("[4]. TU-95 (DoS)")
+print("[5]. Exit")
 
 #Imports scripts for each attack based on number chosen	
 selection = input("Choose Attack Number:")
@@ -43,7 +44,9 @@ elif selection == "3":
 	import robots_crawler
 elif selection == "4":
 	import DoS
+elif selection == "5":
+	break
 else:
-	print("Invalid Selection. Enter 1-4.")
+	print("Invalid Selection. Enter 1-5.")
 
 
