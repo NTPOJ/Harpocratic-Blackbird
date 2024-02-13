@@ -61,3 +61,14 @@ def attack():
 		print(attack_num)
 
 		s.close
+
+print("[1]. Back to base!")
+print("[2]. I need more!")
+
+#Import selection selected to either og back to home or stay and go again
+selection = input("What next commrade?")
+if selection == "1":
+	import Tupelov_V1.46
+	
+elif selection == "2":
+	import Dos
