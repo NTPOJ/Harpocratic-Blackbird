@@ -4,6 +4,10 @@ import sys
 from datetime import datetime
 import threading
 import concurrent.futures
+import pyfiglet
+import colorama
+from colorama import Fore
+colorama.init()
 
 #Enables threading for port scans
 print_lock = threading.Lock()
