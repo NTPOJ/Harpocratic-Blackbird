@@ -22,7 +22,7 @@ ip = input("Enter Host IP to scan: ")
 #Uses sockets to obtain data from the internet.
 #Prints out open ports
 #Timer set to pass closed ports and move on to the open ports.
-print("Scanning started at:" + str(datetime.now()))
+print("Scan started at:" + str(datetime.now()))
 def scan(ip, port):
     scanner = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     scanner.settimeout(1)
@@ -46,8 +46,9 @@ print("[2]. I need more!")
 print("[3]. Cyboogie!")
 print("[4]. We need R&D!")
 print("[5]. Launch it!")
+print("[6]. Exit")
 
-#Imports scripts for each attack based on number chosen	
+#Imports scripts for each attack based on number chosen, back home or exit
 selection = input("Choose wisely")
 if selection == "1":
 	import Harpocratic_Blackbird
@@ -59,5 +60,7 @@ elif selection == "4":
 	import nslookup
 elif selection == "5":
 	import DoS
+elif selection == "6":
+	sys.exit()
 else:
 	print("Invalid Selection. Enter 1-5.")
