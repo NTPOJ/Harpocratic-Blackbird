@@ -6,12 +6,11 @@ import colorama
 from colorama import Fore
 colorama.init()
 
-ascii_banner = pyfiglet.figlet_format("Lets see some robots")
 ascii_banner = pyfiglet.figlet_format("Boston Dynamic Rogue-1")
 print(Fore.CYAN + ascii_banner)
 
-url = input(str("Please enter target URL:"))
-#Uses URL Library to obtain information on URL's with a robots.txt page.
+url = input(str("Please enter the target URL:"))
+#Uses URL Library to obtain information on URL's robots.txt page, if applicable.
 #Uses IO to format output from request.
 def get_robots_txt(url):
 	if url.endswith('/'):
@@ -31,8 +30,9 @@ print("[2]. There is always time for Cyboogie!")
 print("[3]. We need R&D!")
 print("[4]. Survery their ports!")
 print("[5]. Launch it!")
+print("[6]. Exit")
 
-#Imports scripts for each attack based on number chosen	
+#Imports scripts for each attack based on number chosen, back home or exit	
 selection = input("Choose wisely")
 if selection == "1":
 	import Harpocratic-Blackbird
@@ -44,5 +44,7 @@ elif selection == "4":
 	import BackDoorothy
 elif selection == "5":
 	import DoS
+elif selection == "6":
+	sys.exit()
 else:
 	print("Invalid Selection. Enter 1-5.")
