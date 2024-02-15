@@ -22,7 +22,6 @@ print("[2]. More R&D!")
 print("[3]. Cyboogie!")
 print("[4]. Survery their ports!")
 print("[5]. Launch it!")
-print("[6]. Exit!")
 
 #Imports scripts for each attack based on number chosen	
 selection = input("Choose wisely")
@@ -36,7 +35,5 @@ elif selection == "4":
 	import BackDoorothy
 elif selection == "5":
 	import DoS
-elif selection == "6":
-	break
 else:
-	print("Invalid Selection. Enter 1-6.")
+	print("Invalid Selection. Enter 1-5.")
