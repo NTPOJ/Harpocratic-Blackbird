@@ -45,7 +45,7 @@ elif selection == "3":
 elif selection == "4":
 	import DoS
 elif selection == "5":
-	break
+	sys.exit()
 else:
 	print("Invalid Selection. Enter 1-5.")
 
