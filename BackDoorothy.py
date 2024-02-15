@@ -21,18 +21,23 @@ ip = input("Enter Host IP to scan: ")
 #Scan is defined by imported module functions.
 #Uses sockets to obtain data from the internet.
 #Prints out open ports
-#Timer set to pass closed ports and move on to the open ports.
+#Timer set to pass closed ports and move on to the open ports and services.
 print("Scan started at:" + str(datetime.now()))
-def scan(ip, port):
-    scanner = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    scanner.settimeout(1)
+def service_scan(ip, port):
     try:
-        scanner.connect((ip, port))
-        scanner.close()
-        with print_lock:
-            print(Fore.WHITE + f"[{port}]" + Fore.GREEN + "Open")
-    except:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(1)
+            s.connect((ip, port))
+            service_name = socket.getservbyport(port)
+            with print_lock:
+                print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name}")
+    except (socket.timeout, socket.error):
         pass
+
+# Perform the service scan
+    with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+        for port in range(1000):
+            executor.submit(service_scan, ip, port + 1)
 
 #Sets the amount of threads to run, and the range for ports. 
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
