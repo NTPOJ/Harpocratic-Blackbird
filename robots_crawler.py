@@ -33,7 +33,7 @@ print("[5]. Launch it!")
 print("[6]. Exit")
 
 #Imports scripts for each attack based on number chosen, back home or exit	
-selection = input("Choose wisely")
+selection = input("Choose wisely......")
 if selection == "1":
 	import Harpocratic-Blackbird
 elif selection == "2":
@@ -47,4 +47,4 @@ elif selection == "5":
 elif selection == "6":
 	sys.exit()
 else:
-	print("Invalid Selection. Enter 1-5.")
+	print("Invalid Selection. Enter 1-6.")
