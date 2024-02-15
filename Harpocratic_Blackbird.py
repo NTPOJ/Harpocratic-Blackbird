@@ -31,7 +31,7 @@ print("-" * 80)
 print("[1]. NS Lookup")
 print("[2]. BackDoorothy (Port Scanner)")
 print("[3]. Robots.txt crawler")
-print("[4]. TU-95 (DoS)")
+print("[4]. !CAUTION! (DoS)")
 print("[5]. Exit")
 
 #Imports scripts for each attack based on number chosen	
