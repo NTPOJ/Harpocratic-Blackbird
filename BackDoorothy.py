@@ -46,12 +46,11 @@ print("[2]. I need more!")
 print("[3]. Cyboogie!")
 print("[4]. We need R&D!")
 print("[5]. Launch it!")
-print("[6]. Exit!")
 
 #Imports scripts for each attack based on number chosen	
 selection = input("Choose wisely")
 if selection == "1":
-	import Harpocratic-Blackbird
+	import Harpocratic_Blackbird
 elif selection == "2":
 	import BackDoorothy
 elif selection == "3":
@@ -60,7 +59,5 @@ elif selection == "4":
 	import nslookup
 elif selection == "5":
 	import DoS
-elif selection == "6":
-	break
 else:
-	print("Invalid Selection. Enter 1-6.")
+	print("Invalid Selection. Enter 1-5.")
