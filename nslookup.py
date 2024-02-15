@@ -22,8 +22,9 @@ print("[2]. More R&D!")
 print("[3]. Cyboogie!")
 print("[4]. Survery their ports!")
 print("[5]. Launch it!")
+print("[6]. Exit")
 
-#Imports scripts for each attack based on number chosen	
+#Imports scripts for each attack based on number chosen, back home or exit
 selection = input("Choose wisely")
 if selection == "1":
 	import Harpocratic-Blackbird
@@ -35,5 +36,7 @@ elif selection == "4":
 	import BackDoorothy
 elif selection == "5":
 	import DoS
+elif selection == "6":
+	sys.exit()
 else:
 	print("Invalid Selection. Enter 1-5.")
