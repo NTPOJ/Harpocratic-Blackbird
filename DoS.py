@@ -1,5 +1,6 @@
 #Imported modules
 import socket
+import sys
 import threading
 import pyfiglet
 import colorama
@@ -11,12 +12,17 @@ print(Fore.CYAN + ascii_banner)
 
 print("DoS Time")
 print("""
-  .-.    _,  .-.  ,_    .-.
- '-._'--'  \_| |_/  '--'_.-'
-     '-._  \ | | /  _.-'
-         `-.^| |^.-'
-            `\=/`
-				- Joan Stark (ASCII Art Archive)""")
+               \ /                                          \   /
+              --o--           `\\             //'      .____-/.\-____.
+                                \\           //             ~`-'~
+                                 \\. __-__ .//
+                       ___/-_.-.__`/~     ~\'__.-._-\___                    
+.|.       ___________.'__/__ ~-[ \.\'-----'/./ ]-~ __\__`.___________       .|.
+~o~~~~~~~--------______-~~~~~-_/_/ |   .   | \_\_-~~~~~-______--------~~~~~~~o~
+' `               + + +  (X)(X)  ~--\__ __/--~  (X)(X)  + + +               ' `
+                             (X) `/.\' ~ `/.\' (X)  
+                                 "\_/"   "\_/" 
+ Artist: *Unknown*""")
 print("-" * 50)
 print("[*] Disclaimer: This script is to be used only for educational purposes. Do not run script against unauthorized IP's without prior consent.")
 print("[*] This script is configured only to attack port 80.")
@@ -74,7 +80,7 @@ print("[6]. Exit")
 #Imports scripts for each attack based on number chosen, back home or exit
 selection = input("Choose wisely")
 if selection == "1":
-	import Harpocratic-Blackbird
+	import Harpocratic_Blackbird
 elif selection == "2":
 	import DoS
 elif selection == "3":
@@ -86,4 +92,5 @@ elif selection == "5":
 elif selection == "6":
 	sys.exit()
 else:
-	print("Invalid Selection. Enter 1-5.")
+	print("Invalid Selection. Enter 1-6.")
+
