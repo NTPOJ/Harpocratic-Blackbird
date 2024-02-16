@@ -27,7 +27,7 @@ print("[6]. Exit")
 #Imports scripts for each attack based on number chosen, back home or exit
 selection = input("Choose wisely")
 if selection == "1":
-	import Harpocratic-Blackbird
+	import Harpocratic_Blackbird
 elif selection == "2":
 	import nslookup
 elif selection == "3":
