@@ -34,11 +34,6 @@ def service_scan(ip, port):
     except (socket.timeout, socket.error):
         pass
 
-# Perform the service scan
-    with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-        for port in range(1000):
-            executor.submit(service_scan, ip, port + 1)
-
 #Sets the amount of threads to run, and the range for ports. 
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
     for port in range(1000):
