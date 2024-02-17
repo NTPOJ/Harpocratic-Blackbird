@@ -34,10 +34,10 @@ def service_scan(ip, port):
     except (socket.timeout, socket.error):
         pass
 
-#Sets the amount of threads to run, and the range for ports. 
-with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-    for port in range(1000):
-        executor.submit(scan, ip, port + 1)
+# Perform the service scan
+    with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+        for port in range(1000):
+            executor.submit(service_scan, ip, port + 1)
 
 print("What's next commrade?")
 
@@ -63,4 +63,4 @@ elif selection == "5":
 elif selection == "6":
 	sys.exit()
 else:
-	print("Invalid Selection. Enter 1-5.")
+	print("Invalid Selection. Enter 1-6.")
