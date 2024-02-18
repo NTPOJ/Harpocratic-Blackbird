@@ -1,6 +1,6 @@
-
 #Module Imports
 import os
+import sys
 import colorama
 from colorama import *
 import pyfiglet
@@ -10,7 +10,7 @@ colorama.init()
 #Clears the terminal when running
 os.system('cls' if os.name == 'nt' else 'clear')
 
-print("Your good friend Harpocratic Blackbird!".center(80, "-"))
+print(Fore.RED + "Your good friend Harpocratic Blackbird!".center(80, "-"))
 print(Fore.RED + 
 """
                                     .:^
@@ -30,7 +30,7 @@ print("List of Attacks:")
 print("-" * 80)
 print("[1]. NS Lookup")
 print("[2]. BackDoorothy (Port Scanner)")
-print("[3]. Robots.txt crawler")
+print("[3]. Cyboogie! (Robots.txt crawler)")
 print("[4]. !CAUTION! (DoS)")
 print("[5]. Exit")
 
@@ -41,12 +41,10 @@ if selection == "1":
 elif selection == "2":
 	import BackDoorothy
 elif selection == "3":
-	import robots_crawler
+	import Cyboogie
 elif selection == "4":
 	import DoS
 elif selection == "5":
 	sys.exit()
 else:
 	print("Invalid Selection. Enter 1-5.")
-
-
