@@ -44,7 +44,7 @@ while True:
 
     # Perform the service scan
     with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-        for port in range(1, 2048):
+        for port in range(1000):
             executor.submit(service_scan, ip, port + 1)
 
     print("What's next comrade?")
