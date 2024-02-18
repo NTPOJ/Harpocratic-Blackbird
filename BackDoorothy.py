@@ -28,17 +28,9 @@ def service_scan(ip, port):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(1)
             s.connect((ip, port))
-
-            # Check for service version by retrieving banner information
-            banner = s.recv(1024).decode('utf-8').strip()
             service_name = socket.getservbyport(port)
-
             with print_lock:
-                if banner:
-                    print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: {banner}")
-                else:
-                    print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: N/A")
-
+                print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name}")
     except (socket.timeout, socket.error):
         pass
 
