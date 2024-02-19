@@ -61,7 +61,7 @@ while True:
         # Continue to the next iteration of the loop
         continue
     elif selection == "3":
-        import nslookup
+        import DNS_Converter
     elif selection == "4":
         import BackDoorothy
     elif selection == "5":
