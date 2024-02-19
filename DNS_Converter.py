@@ -18,10 +18,10 @@ while True:
     print("What's next comrade?")
 
     print("[1]. Back to base!")
-    print("[2]. More R&D!")
-    print("[3]. Cyboogie!")
-    print("[4]. Survery their ports!")
-    print("[5]. Launch it!")
+    print("[2]. MORE DNS Converter!")
+    print("[3]. Directroy Scanner!")
+    print("[4]. Port Scanner!")
+    print("[5]. !CAUTION! (DoS)")
     print("[6]. Exit")
 
     # Imports scripts for each attack based on the number chosen, back home, or exit
