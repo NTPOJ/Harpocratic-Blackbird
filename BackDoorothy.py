@@ -50,7 +50,7 @@ while True:
 
     # Nmap scan
     nm = nmap.PortScanner()
-    nm.scan(ip, arguments='-p 26-2048')
+    nm.scan(ip, arguments='-p 25-2048')
 
     # Iterate over the results and print open ports
     if ip in nm.all_hosts():
