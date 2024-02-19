@@ -28,9 +28,9 @@ print(Fore.RED +
 #Attack Options
 print("List of Attacks:")
 print("-" * 80)
-print("[1]. NSLookup")
+print("[1]. DNS Converter")
 print("[2]. BackDoorothy (Port Scanner)")
-print("[3]. Cyboogie! (Robots.txt crawler)")
+print("[3]. Directroy Scanner!")
 print("[4]. !CAUTION! (DoS)")
 print("[5]. Exit")
 
