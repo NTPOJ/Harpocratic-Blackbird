@@ -47,10 +47,10 @@ while True:
     print("What's next comrade?")
 
     print("[1]. Back to base!")
-    print("[2]. There is always time for Cyboogie!")
-    print("[3]. We need R&D!")
-    print("[4]. Survery their ports!")
-    print("[5]. Launch it!")
+    print("[2]. GO AGAIN!")
+    print("[3]. DNS Converter!")
+    print("[4]. Port Scanner!")
+    print("[5]. !CAUTION! (DoS)")
     print("[6]. Exit")
 
     selection = input("Choose wisely: ")
