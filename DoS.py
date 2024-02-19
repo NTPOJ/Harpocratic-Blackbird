@@ -72,7 +72,7 @@ while True:
     elif selection == "3":
         import Cyboogie
     elif selection == "4":
-        import nslookup
+        import DNS_Converter
     elif selection == "5":
         import BackDoorothy
     elif selection == "6":
