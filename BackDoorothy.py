@@ -6,6 +6,7 @@ import threading
 import concurrent.futures
 import pyfiglet
 import colorama
+import nmap
 from colorama import Fore
 
 colorama.init()
@@ -29,7 +30,7 @@ while True:
     def service_scan(ip, port):
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.settimeout(1)
+                s.settimeout(3)
                 s.connect((ip, port))
                 banner = s.recv(1024).decode('utf-8').strip()
                 service_name = socket.getservbyport(port)
@@ -44,8 +45,21 @@ while True:
 
     # Perform the service scan
     with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-        for port in range(1000):
+        for port in range(1, 2048):
             executor.submit(service_scan, ip, port + 1)
+
+    # Nmap scan
+    nm = nmap.PortScanner()
+    nm.scan(ip, arguments='-p 25-2048')
+
+    # Iterate over the results and print open ports
+    if ip in nm.all_hosts():
+        for protocol in nm[ip].all_protocols():
+            for port in nm[ip][protocol]:
+                result = nm[ip][protocol][port]
+                if result['state'] == 'open':
+                    service_name = socket.getservbyport(int(port))
+                    print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: {result['product']}")
 
     print("What's next comrade?")
 
