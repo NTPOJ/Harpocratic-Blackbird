@@ -28,7 +28,7 @@ print(Fore.RED +
 #Attack Options
 print("List of Attacks:")
 print("-" * 80)
-print("[1]. NS Lookup")
+print("[1]. NSLookup")
 print("[2]. BackDoorothy (Port Scanner)")
 print("[3]. Cyboogie! (Robots.txt crawler)")
 print("[4]. !CAUTION! (DoS)")
@@ -37,7 +37,7 @@ print("[5]. Exit")
 #Imports scripts for each attack based on number chosen	
 selection = input("Choose Attack Number:")
 if selection == "1":
-	import nslookup
+	import DNS_Converter
 elif selection == "2":
 	import BackDoorothy
 elif selection == "3":
