@@ -50,7 +50,7 @@ while True:
 
     # Nmap scan
     nm = nmap.PortScanner()
-    nm.scan(ip, arguments='-p 25-2048')
+    nm.scan(ip, arguments='-p 26-2048')
 
     # Iterate over the results and print open ports
     if ip in nm.all_hosts():
@@ -58,8 +58,14 @@ while True:
             for port in nm[ip][protocol]:
                 result = nm[ip][protocol][port]
                 if result['state'] == 'open':
-                    service_name = socket.getservbyport(int(port))
-                    print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: {result['product']}")
+                    try:
+                        service_name = socket.getservbyport(int(port))
+                    except OSError as e:
+                        # Handle the exception, for example, print a default value
+                        service_name = "Unknown Service"
+                        print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: {result['product']}")
+                    else:
+                        print(Fore.WHITE + f"[{port}]" + Fore.GREEN + f"Open - {service_name} - Version: {result['product']}")
 
     print("What's next comrade?")
 
