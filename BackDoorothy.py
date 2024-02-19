@@ -71,9 +71,9 @@ while True:
 
     print("[1]. Back to base!")
     print("[2]. I need more!")
-    print("[3]. Cyboogie!")
-    print("[4]. We need R&D!")
-    print("[5]. Launch it!")
+    print("[3]. Directroy Scanner!")
+    print("[4]. DNS Converter!")
+    print("[5]. !CAUTION! (DoS)")
     print("[6]. Exit")
 
     # Imports scripts for each attack based on the number chosen, back home, or exit
